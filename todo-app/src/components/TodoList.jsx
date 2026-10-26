@@ -31,34 +31,32 @@ function TodoList() {
       ) : (
         <ul>
           {todos.map((todo) => (
-       <li key={todo.id}>
-  <label>
-    <input
-      type="checkbox"
-      checked={todo.completed}
-      onChange={() => toggleTodo(todo.id)}
-    />
+            <li key={todo.id}>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={todo.completed}
+                  onChange={() => toggleTodo(todo.id)}
+                />
 
-    <span
-      style={{
-        textDecoration: todo.completed ? "line-through" : "none",
-      }}
-    >
-      {todo.title}
-    </span>
-  </label>
+                <span
+                  style={{
+                    textDecoration: todo.completed ? "line-through" : "none",
+                  }}
+                >
+                  {todo.title}
+                </span>
+              </label>
 
-  <button
-    type="button"
-    onClick={() => deleteTodo(todo.id)}
-  >
-    Delete
-  </button>
-</li>
+              <button type="button" onClick={() => deleteTodo(todo.id)}>
+                Delete
+              </button>
+            </li>
           ))}
         </ul>
       )}
     </div>
   );
 }
+
 export default TodoList;
