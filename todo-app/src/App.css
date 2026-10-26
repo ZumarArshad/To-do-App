@@ -40,7 +40,19 @@
   gap: 10px;
   margin-bottom: 25px;
 }
-
+.todo-list input[type="text"] {
+  min-width: 0;
+  min-height: 52px;
+  flex: 1;
+  padding: 0 16px;
+  border: 1px solid #e2e8e0;
+  border-radius: 11px;
+  outline: none;
+  color: #34443a;
+  background: #fbfcf9;
+  font-size: 14px;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
 .todo-list form input[type="text"] {
   min-width: 0;
   min-height: 52px;

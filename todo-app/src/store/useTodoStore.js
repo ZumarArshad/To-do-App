@@ -18,6 +18,12 @@ const useTodoStore = create((set) => ({
             todos: state.todos.filter((todo) =>
             todo.id !== id
         )
-        }))
+        })),
+    editTodo:(id, newTitle) =>
+        set((state) => ({
+            todos: state.todos.map((todo) =>
+                todo.id === id ? { ...todo, title: newTitle } : todo
+            ),
+        })),    
   }));
 export default useTodoStore;
